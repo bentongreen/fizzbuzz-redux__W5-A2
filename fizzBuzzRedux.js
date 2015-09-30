@@ -23,23 +23,23 @@
         fbOutputList.removeChild(fbOutputList.firstChild); //loops through and removes all content, IE reset
       }
 
-      function writeToList(option){
+      function writeToList(item){
       console.log("writeToList");
       fbOutputList = document.getElementsByClassName('fizzBuzzOutput')[0];
       fbOutputContent = document.createElement('li');
-      fbOutputContent.appendChild(document.createTextNode(option));
+      fbOutputContent.appendChild(document.createTextNode(item));
       fbOutputList.appendChild(fbOutputContent);
       }
 
       for(var x = this.startingNum; x < this.endingNum; x++) {
         if(x%3 === 0 && x%5 === 0){
-          writeToList("fizzybuzzer");
+          writeToList(x + " fizzybuzzer");
         }
           else if(x%3 === 0){
-            writeToList("fizzy");  
+            writeToList(x + " fizzy");  
           }
             else if(x%5 === 0){
-              writeToList("buzzer");
+              writeToList(x + " buzzer");
             }
             else{
               writeToList(x);
